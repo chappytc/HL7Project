@@ -1,0 +1,16 @@
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7UnitTests.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7UnitTests.pdb
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7MessagePaser.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7MessagePaser.pdb
+C:\GitHub\HL7Project\HL7UnitTests\obj\Debug\HL7UnitTests.csprojResolveAssemblyReference.cache
+C:\GitHub\HL7Project\HL7UnitTests\obj\Debug\HL7UnitTests.dll
+C:\GitHub\HL7Project\HL7UnitTests\obj\Debug\HL7UnitTests.pdb
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7Data.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7Model.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\EntityFramework.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7Data.pdb
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7Model.pdb
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\EntityFramework.xml
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\HL7UnitTests.dll.config
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\HL7Project\HL7UnitTests\bin\Debug\EntityFramework.SqlServer.xml

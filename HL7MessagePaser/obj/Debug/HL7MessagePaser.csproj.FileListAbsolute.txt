@@ -1,0 +1,4 @@
+C:\GitHub\HL7Project\HL7MessagePaser\bin\Debug\HL7MessagePaser.dll
+C:\GitHub\HL7Project\HL7MessagePaser\bin\Debug\HL7MessagePaser.pdb
+C:\GitHub\HL7Project\HL7MessagePaser\obj\Debug\HL7MessagePaser.dll
+C:\GitHub\HL7Project\HL7MessagePaser\obj\Debug\HL7MessagePaser.pdb

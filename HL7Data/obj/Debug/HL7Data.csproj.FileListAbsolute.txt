@@ -1,0 +1,12 @@
+C:\GitHub\HL7Project\HL7Data\obj\Debug\HL7Data.csprojResolveAssemblyReference.cache
+C:\GitHub\HL7Project\HL7Data\bin\Debug\HL7Data.dll
+C:\GitHub\HL7Project\HL7Data\bin\Debug\HL7Data.pdb
+C:\GitHub\HL7Project\HL7Data\obj\Debug\HL7Data.dll
+C:\GitHub\HL7Project\HL7Data\obj\Debug\HL7Data.pdb
+C:\GitHub\HL7Project\HL7Data\bin\Debug\HL7Data.dll.config
+C:\GitHub\HL7Project\HL7Data\bin\Debug\EntityFramework.dll
+C:\GitHub\HL7Project\HL7Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\HL7Project\HL7Data\bin\Debug\HL7Model.dll
+C:\GitHub\HL7Project\HL7Data\bin\Debug\HL7Model.pdb
+C:\GitHub\HL7Project\HL7Data\bin\Debug\EntityFramework.xml
+C:\GitHub\HL7Project\HL7Data\bin\Debug\EntityFramework.SqlServer.xml

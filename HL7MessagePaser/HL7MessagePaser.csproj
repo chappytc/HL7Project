@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08218BA2-B545-4FB2-A68E-CAB0FB16C797}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HL7MessagePaser</RootNamespace>
+    <AssemblyName>HL7MessagePaser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomAttributes.cs" />
+    <Compile Include="Enums\DriverTypes.cs" />
+    <Compile Include="Enums\EnumUtils.cs" />
+    <Compile Include="Enums\MessageTypes.cs" />
+    <Compile Include="Enums\SegmentTypes.cs" />
+    <Compile Include="Enums\Versions.cs" />
+    <Compile Include="Messages\V23\GenericHealthCareMessage.cs" />
+    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\MessageFactory.cs" />
+    <Compile Include="Messages\V23\TennesseeHealthCareMessage.cs" />
+    <Compile Include="Messages\V23\USAHealthCareMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Segments\Factories\GenericV23HealthcareSegmentFactory.cs" />
+    <Compile Include="Segments\Factories\TennesseeHealthcareSegmentFactory.cs" />
+    <Compile Include="Segments\Factories\UsaHealthcareSegmentFactory.cs" />
+    <Compile Include="Segments\Segment.cs" />
+    <Compile Include="Segments\SegmentDelimiters.cs" />
+    <Compile Include="Segments\SegmentFactoryManager.cs" />
+    <Compile Include="Segments\SegmentFactory.cs" />
+    <Compile Include="Segments\Abstracts\DG1.cs" />
+    <Compile Include="Segments\Abstracts\EVN.cs" />
+    <Compile Include="Segments\Abstracts\GT1.cs" />
+    <Compile Include="Segments\Abstracts\IN1.cs" />
+    <Compile Include="Segments\Abstracts\IN2.cs" />
+    <Compile Include="Segments\Abstracts\MSH.cs" />
+    <Compile Include="Segments\Abstracts\NK1.cs" />
+    <Compile Include="Segments\Abstracts\PID.cs" />
+    <Compile Include="Segments\Abstracts\PV1.cs" />
+    <Compile Include="Segments\V23\Generic\DG1.cs" />
+    <Compile Include="Segments\V23\Generic\EVN.cs" />
+    <Compile Include="Segments\V23\Generic\GT1.cs" />
+    <Compile Include="Segments\V23\Generic\IN1.cs" />
+    <Compile Include="Segments\V23\Generic\IN2.cs" />
+    <Compile Include="Segments\V23\Generic\MSH.cs" />
+    <Compile Include="Segments\V23\Generic\NK1.cs" />
+    <Compile Include="Segments\V23\Generic\PID.cs" />
+    <Compile Include="Segments\V23\Generic\PV1.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\DG1.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\EVN.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\GT1.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\IN1.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\IN2.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\MSH.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\NK1.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\PID.cs" />
+    <Compile Include="Segments\V23\TennesseeHealthCare\PV1.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\DG1.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\EVN.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\GT1.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\IN1.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\IN2.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\MSH.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\NK1.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\PID.cs" />
+    <Compile Include="Segments\V23\USAHealthCare\PV1.cs" />
+    <Compile Include="Segments\SegmentV23.cs" />
+    <Compile Include="Types\Address.cs" />
+    <Compile Include="Types\AssigningAuthority.cs" />
+    <Compile Include="Types\AssigningFacility.cs" />
+    <Compile Include="Types\CodedElement.cs" />
+    <Compile Include="Types\CompositeIdAndName.cs" />
+    <Compile Include="Types\CompositeIdWithCheckDigit.cs" />
+    <Compile Include="Types\ExtendedAddress.cs" />
+    <Compile Include="Types\ExtendedCompositeIdAndName.cs" />
+    <Compile Include="Types\ExtendedCompositeIdWithCheckDigit.cs" />
+    <Compile Include="Types\ExtendedOrganization.cs" />
+    <Compile Include="Types\ExtendedPersonName.cs" />
+    <Compile Include="Types\ExtendedPhoneNumber.cs" />
+    <Compile Include="Types\JobCodeClass.cs" />
+    <Compile Include="Types\MessageType.cs" />
+    <Compile Include="Types\PersonLocation.cs" />
+    <Compile Include="Types\PersonName.cs" />
+    <Compile Include="Types\PhoneNumber.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Messages\V25\" />
+    <Folder Include="Segments\V25\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
