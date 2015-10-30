@@ -20,7 +20,7 @@ namespace HL7Model
         public int PatientId { get; set; }
         public string ExternalPatientId { get; set; }
         public string InternalPatientId { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string Gender { get; set; }
         public Address Address { get; set; }
         public PhoneNumber PrimaryPhoneNumber { get; set; }

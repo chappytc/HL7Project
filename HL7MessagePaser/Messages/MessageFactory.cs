@@ -7,6 +7,14 @@ namespace HL7MessagePaser.Messages
 {
     public class MessageFactory
     {
+        private const int HEALTHCARE_PROVIDER_MSH_FIELD_INDEX = 3;
+        private const int HL7_VERSION_MSH_FIELD_INDEX = 11;
+
+        private const int FIELD_SEPARATOR_START_INDEX = 3;
+        private const int FIELD_SEPARATOR_LENGTH = 1;
+
+        private const string MESSAGE_HEADER_SEGMENT_ID = "MSH";
+
         IEnumerable<Type> GetTypesWith<TAttribute>(bool inherit)
                                       where TAttribute : Attribute
         {
@@ -24,21 +32,22 @@ namespace HL7MessagePaser.Messages
             {
                 List<string> segments = new List<string>(message.Replace("\r\n", "\r").Split('\r'));
 
-                // First segment of a message should always be a MSH segment.
-                if (segments[0].StartsWith("MSH"))
+                // First segment of a message should always be a MSH segment. But, just in case it is not,
+                // find the first MSH segment in the message and use it.
+                string mshSegment = segments.FirstOrDefault(s => s.Contains(MESSAGE_HEADER_SEGMENT_ID));
+                if (mshSegment != null)
                 {
                     // Determine the field delimiter for the message.
-                    char fieldSeparator = segments[0].Substring(3, 1).ToCharArray()[0];
+                    char fieldSeparator = mshSegment.Substring(FIELD_SEPARATOR_START_INDEX, FIELD_SEPARATOR_LENGTH).ToCharArray()[0];
 
                     // Split the MSH into fields.
-                    string[] fields = segments[0].Split(fieldSeparator);
+                    string[] fields = mshSegment.Split(fieldSeparator);
 
-                    // Field 3 will tell us what message driver we need to use.
-                    // Field 11 will tell us what HL7 version to use.
-                    if (fields.Length > 11)
+                    // Make sure the MSH has at least enough fields to get us the version number
+                    if (fields.Length > HL7_VERSION_MSH_FIELD_INDEX)
                     {
-                        string driverName = fields[3];
-                        string version = fields[11];
+                        string driverName = fields[HEALTHCARE_PROVIDER_MSH_FIELD_INDEX];
+                        string version = fields[HL7_VERSION_MSH_FIELD_INDEX];
 
                         // Using custom attributes on the defined HL7 Message classes, we
                         // can find the proper class to create an instance of. Doing it this
@@ -49,6 +58,7 @@ namespace HL7MessagePaser.Messages
                             where t.IsDefined(typeof (HL7MessageAttribute), true)
                             select t;
 
+                        // TODO: Come back and see if there is a performance enhancement
                         foreach (Type t in types)
                         {
                             var attributes = t.GetCustomAttributes(typeof (HL7MessageAttribute), true);

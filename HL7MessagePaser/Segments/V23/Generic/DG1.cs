@@ -3,6 +3,7 @@ using HL7MessagePaser.Types;
 
 namespace HL7MessagePaser.Segments.V23.Generic
 {
+    // TODO: Come back in all of the segment classes and replace the field ordinal with constants.
     public class DG1 : Abstracts.DG1
     {
         public DG1(string mshSegment)
